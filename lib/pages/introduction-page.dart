@@ -165,10 +165,11 @@ class _IntroductionPageState extends State<IntroductionPage> {
                           volume: 0.3,
                           position: Duration(milliseconds: 0),
                           AssetSource('audios/click.mp4'));
-                      controller.jumpToPage(5);
+
                       controller.nextPage(
                           duration: Duration(milliseconds: 500),
                           curve: Curves.easeInOut);
+                      print('phone');
                     },
                     child: Text(
                       'NEXT',
@@ -194,23 +195,21 @@ class _IntroductionPageState extends State<IntroductionPage> {
         color: color,
         child: Stack(
           children: [
-            Container(
-              constraints: BoxConstraints.expand(),
+            Container( 
               decoration: BoxDecoration(
                   image: DecorationImage(
-                fit: BoxFit.fitHeight,
+                fit: BoxFit.fitWidth, 
                 image: AssetImage('assets/images/bg-${urlBg}.jpg'),
-              )),
-              padding: const EdgeInsets.all(0),
+              )), 
             ),
             Opacity(
               opacity: 0.7,
               child: SizedBox.expand(
                 child: FittedBox(
-                  fit: BoxFit.fill,
+                  fit: BoxFit.fitWidth,
                   child: SizedBox(
                     width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height,
                     child: const DecoratedBox(
                       decoration: const BoxDecoration(color: Color(0xff1B82CD)),
                     ),
@@ -219,7 +218,7 @@ class _IntroductionPageState extends State<IntroductionPage> {
               ),
             ),
             Container(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: EdgeInsets.symmetric(horizontal: 30),
                 width: MediaQuery.of(context).size.width,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,

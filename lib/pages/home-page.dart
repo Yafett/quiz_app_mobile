@@ -341,8 +341,7 @@ class _HomePageState extends State<HomePage> {
                             volume: 1,
                             position: Duration(milliseconds: 0),
                             AssetSource('audios/click.mp4'));
-                        SystemNavigator.pop();
-                        exit(0);
+                        Navigator.pop(context);
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width / 2.7,
@@ -367,6 +366,8 @@ class _HomePageState extends State<HomePage> {
                             volume: 1,
                             position: Duration(milliseconds: 0),
                             AssetSource('audios/click.mp4'));
+                        SystemNavigator.pop();
+                        exit(0);
                       },
                       child: Container(
                         width: MediaQuery.of(context).size.width / 2.7,
@@ -387,7 +388,6 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                
               ],
             )),
       ),
