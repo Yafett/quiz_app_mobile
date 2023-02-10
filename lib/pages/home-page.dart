@@ -317,7 +317,7 @@ class _HomePageState extends State<HomePage> {
                       Container(
                         height: 80,
                         width: 80,
-                        child: Image(
+                        child: Image( 
                           image: AssetImage('assets/images/exit.png'),
                         ),
                       ),
